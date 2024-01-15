@@ -1,6 +1,8 @@
---// Services
+--// Services & Libraries
 local TweenService=game:GetService"TweenService"
 local UserInputService=game:GetService"UserInputService"
+local Libraries=script.Parent.Parent.Libraries
+local Draggable=require(Libraries.Draggable)
 
 --// Instances
 local Interface=script.Parent
@@ -181,3 +183,6 @@ UserInputService.InputBegan:Connect(function(Input)
 		HidePopup()
 	end
 end)
+
+
+Draggable:MakeDraggable(Window)
